@@ -12,7 +12,7 @@ void Setup(AlxWindow* w){
 	//sp = Sprite_Load("./data/Dogs_3.jpg");
 	//sp = Sprite_Load("./data/Linux.png");
 
-	sp = Sprite_None();
+	sp = Sprite_Null();
 	rlc = RLCamera_New(RLCAMERA_DEVICE,RLCAMERA_WIDTH * 2,RLCAMERA_HEIGHT * 2);
 }
 void Update(AlxWindow* w){
@@ -37,7 +37,7 @@ void Update(AlxWindow* w){
 	if(Stroke(ALX_KEY_E).DOWN) Regler2 *= 1.01;
 	if(Stroke(ALX_KEY_D).DOWN) Regler2 *= 0.99;
 
-	Sprite now = Sprite_None();
+	Sprite now = Sprite_Null();
     int width = 0,height = 0;
     now.img = RLCamera_Get(&rlc,&width,&height);
     now.w = width;
